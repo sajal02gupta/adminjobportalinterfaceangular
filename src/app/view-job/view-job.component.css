@@ -1,9 +1,59 @@
 body {
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    width: 100%;
+    background: -webkit-linear-gradient(left, white);
+    background-color: black;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+
+.form-control {
+    font-size: small;
+    font: bolder;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+}
+
+.form-control-file {
+    font-size: small;
+}
+
+#exampleFormControlInput1:hover {
+    border: solid, white;
+}
+
+.form-control::placeholder {
+    color: rgb(194, 194, 52);
+}
+
+.form-group {
+    color: white;
+    font-size: 15pt;
+}
+
+#fileHelp {
+    font-size: small;
+}
+
+#exampleFormControlInput1 {
+    color: rgb(194, 194, 59);
+    background-color: black;
+}
+
+#exampleFormControlInput1:hover {
+    border-style: double;
+}
+
+.btn {
+    border-color: rgb(194, 194, 19);
+    color: white;
+}
+
+.btn:hover {
+    color: black;
+    background-color: rgb(194, 194, 63);
 }
 
 .form1 {
@@ -19,6 +69,7 @@ body {
     border-radius: 25px;
     border: 4px solid white;
     padding: 5px;
+
 }
 
 .input1 {
@@ -34,7 +85,7 @@ body {
     display: none;
     font-size: 1em;
     border-radius: 20px;
-    padding: 0 20px;
+    padding: 0 0 0 20px;
 }
 
 .fa {
@@ -46,7 +97,7 @@ body {
     top: 0;
     right: 0;
     border-radius: 50%;
-
+    color: #07051a;
     text-align: center;
     font-size: 1.2em;
     transition: all 1s;
@@ -62,6 +113,6 @@ body {
 }
 
 .form1:hover .fa {
-    background: #07051a;
-    color: white;
+    background: yellow;
+    color: black;
 }

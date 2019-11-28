@@ -1,0 +1,122 @@
+<div>{{id}}</div>
+<div class="ftco-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-8 mb-5">
+                <form action="#" class="p-5 bg-white" *ngIf="j.jobId==id">
+                    
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Job ID</label>
+                            <input type="number" name="jobId" [(ngModel)]="j.jobId" class="form-control"
+                                placeholder="eg. 11576635">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Job Title</label>
+                            <input type="text" name="jobTitle" [(ngModel)]="j.jobTitle" class="form-control"
+                                placeholder="eg. Professional UI/UX Designer">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Job Category</label>
+                            <input type="text" name="jobCategory" [(ngModel)]="j.jobCategory" class="form-control"
+                                placeholder="eg. Developer/Analyst">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Location</label>
+                            <input type="text" name="primaryLocation" [(ngModel)]="j.primaryLocation"
+                                class="form-control" placeholder="Bangalore, India">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Additional Location</label>
+                            <input type="text" name="additionalLocation" [(ngModel)]="j.additionalLocation"
+                                class="form-control" placeholder="Bangalore, India">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Schedule</label>
+                            <input type="text" name="schedule" [(ngModel)]="j.schedule" class="form-control"
+                                placeholder="eg. Shifts">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Job Type</label>
+                            <input type="text" name="jobType" [(ngModel)]="j.jobType" class="form-control"
+                                placeholder="eg. Developer/Analyst">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Job Summary</label>
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <textarea name="jobsummary" name="jobSummary" [(ngModel)]="j.jobSummary"
+                                    class="form-control" id="" cols="30" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <h3>Job Description</h3>
+                        </div>
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <textarea name="jobDescription" class="form-control" [(ngModel)]="j.jobDescription"
+                                cols="30" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Qualification</label>
+                            <div class="col">
+                                <input type="text" name="jobQualification" class="form-control"
+                                    [(ngModel)]="j.jobQualification[0]" placeholder="Enter 10th percentage">
+                            </div>
+                            <div class="col">
+                                <input type="text" name="jobQualification" class="form-control"
+                                    [(ngModel)]="j.jobQualification[1]" placeholder="Enter 12th percentage">
+                            </div>
+                            <div class="col">
+                                <input type="text" name="jobQualification" class="form-control"
+                                    [(ngModel)]="j.jobQualification[2]" placeholder="Enter graduation CGPA">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Work Environment</label>
+                            <input type="text" name="workEnvironment" [(ngModel)]="j.workEnvironment"
+                                class="form-control" placeholder="eg. home or office or both">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Recruiter</label>
+                            <input type="text" name="recruiter" [(ngModel)]="j.recruiter" class="form-control"
+                                placeholder="eg. home or office or both">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Similar Jobs</label>
+                            <input type="text" name="similarJobs" [(ngModel)]="j.similarJobs" class="form-control"
+                                placeholder="eg. home or office or both">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <input type="submit" value="Post" class="btn btn-primary  py-2 px-5" (click)="updateJob(j)">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

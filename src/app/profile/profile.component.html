@@ -1,0 +1,126 @@
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: black;">
+
+    <div> <img src="" width="30" height="30" class="d-inline-block align-top" alt=""></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" style="padding-left: 25px;padding-top: 5px;">
+                <a class="nav-link" style="color: yellow;" [routerLink]="['/home',username]"
+                    routerLinkActive="router-link-active">Home
+                    <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" style="padding-left: 25px;padding-top: 5px;">
+                <a class="nav-link" style="color: yellow;" [routerLink]="['/profile',username]"
+                    routerLinkActive="router-link-active">Profile</a>
+            </li>
+            <li class="nav-item" style="animation-direction: reverse; padding-left: 25px;">
+                <form action="" class="form1">
+                    <input type="search" class="input1" placeholder="search by role">
+                    <i class="fa fa-search"></i>
+                </form>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg0" style="padding-right: 2.5em; padding-top: 5px;">
+            <a class="nav-link" style="color: yellow;" routerLink="">Logout</a>
+        </form>
+    </div>
+</nav>
+<div class="jumbotron" style="background-color: black; height: 390px;">
+    <div class="container">
+        <h1 class="display-4" style="color:yellow;margin-left: 25rem;"> </h1>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style="margin-top: 2rem;">
+            <div class="tab-content profile-tab" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label style="color: yellow;font-size: large; ">Employee Id</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="color:white; font-size: large;">{{emp.empId}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label style="color: yellow; font-size: large;"> Full Name</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="color:white; font-size: large;">{{emp.fullname}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label style="color: yellow;font-size: large;">Email</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="color:white; font-size: large;">{{emp.email}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label style="color: yellow ;font-size: large;">Phone</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="color:white;font-size: large;">{{emp.mobile}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-top: 2rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <label style="color: yellow;font-size: large;">Current Role</label>
+                </div>
+                <div class="col-md-6">
+                    <p style="color:white;font-size: large;">{{emp.currentrole}}</p>
+                </div>
+                <div class="col-md-6">
+                    <label style="color: yellow;font-size: large;">Experience</label>
+                </div>
+                <div class="col-md-6">
+                    <p style="color:white;font-size: large;">{{emp.years}}</p>
+                </div>
+                <div class="col-md-6">
+                    <label style="color: yellow;font-size: large;">Skills</label>
+                </div>
+                <div class="col-md-6">
+                    <p style="color:white;font-size: large;">{{emp.skills}}</p>
+                </div>
+                <div class="col-md-6">
+                    <label style="color: yellow;font-size: large;">Qualifications</label>
+                </div>
+                <div class="col-md-6">
+                    <p style="color:white;font-size: large;">{{emp.qualifications}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button type="button" class="btn btn-warning" [routerLink]="['/edit',username]" routerLinkActive="router-link-active"  style="margin-top:1.5rem;margin-left:45rem;">Update Jobs</button>
+</body>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">

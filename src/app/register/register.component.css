@@ -54,7 +54,7 @@ body{
 	color:black !important;
 }
 
-.login{
+.register{
 	position: absolute;
 	top: calc(50% - 75px);
 	left: calc(50% - 50px);
@@ -63,8 +63,31 @@ body{
 	padding: 10px;
 	z-index: 2;
 }
-
-.login input[type=text]{
+.register input[type=number]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+    padding: 4px;
+}
+.register input[type=email]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+    padding: 4px;
+}
+.register input[type=text]{
 	width: 250px;
 	height: 30px;
 	background: transparent;
@@ -77,7 +100,7 @@ body{
 	padding: 4px;
 }
 
-.login input[type=password]{
+.register input[type=password]{
 	width: 250px;
 	height: 30px;
 	background: transparent;
@@ -91,7 +114,7 @@ body{
 	margin-top: 10px;
 }
 
-.login input[type=button]{
+.register input[type=button]{
 	width: 260px;
 	height: 35px;
 	background: #fff;

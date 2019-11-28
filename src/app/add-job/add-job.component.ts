@@ -8,7 +8,7 @@ import { JobInfo } from "../JobInfo";
 })
 export class AddJobComponent implements OnInit {
 
-  job: JobInfo= new JobInfo("","","","","","","","","",[],"", "",""); 
+  job: JobInfo= new JobInfo("","","","","","","","","",[],"","", "",""); 
   qualifications:string[] = ["", "", ""];
 
   constructor(private httpclientservice: JobserviceService) { }

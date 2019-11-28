@@ -6,6 +6,7 @@ import { JobInfo } from "././JobInfo";
   providedIn: 'root'
 })
 export class JobserviceService {
+  
 
   constructor(private httpclient: HttpClient) { }
 
@@ -22,5 +23,14 @@ export class JobserviceService {
   public deleteJob(job:JobInfo) {
     console.log("deleted");
     return this.httpclient.delete<JobInfo>("http://localhost:8080/deletejob" + "/" + job.jobId);
+  }
+
+  public updateJob(job: JobInfo) {
+    console.log("updated");
+    return this.httpclient.put<JobInfo>("http://localhost:8080/jobinfo/updatejob/"+job.jobId, job);
+  }
+
+  findByid(id: string) {
+    return this.httpclient.get<JobInfo>("http://localhost:8080/findById"+"/"+id)
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { JobInfo } from '../JobInfo';
 import { JobserviceService } from "../jobservice.service";
 
@@ -10,7 +10,6 @@ import { JobserviceService } from "../jobservice.service";
 export class ViewJobComponent implements OnInit {
 
   job: JobInfo[];
-
   constructor(private httpclientservice: JobserviceService) { }
 
   ngOnInit() {

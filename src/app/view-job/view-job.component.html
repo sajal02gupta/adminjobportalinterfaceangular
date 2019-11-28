@@ -1,49 +1,59 @@
-<nav class="navbar navbar-light" id="ftco-navbar">
-    <div class="container">
-        <img src="assets/image/download.png">
-        <a class="navbar-brand" href=" ">JobPortal</a>
-        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#ftco-nav"
-            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu">Menu</span>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: black;">
+    
+        <div> <img src="./../../assets/image/Logo2.png" width="30" height="30" class="d-inline-block align-top" alt=""></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a [routerLink]="['/addjob']" class="nav-link">Add Jobs</a></li>
-                <li class="nav-item"><a [routerLink]="['/']" class="nav-link">View Jobs</a></li>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active" style="padding-left: 25px;padding-top: 5px;">
+                    <a class="nav-link" style="color: yellow;" [routerLink]="['/admin/addjob']" routerLinkActive="router-link-active" >Add Job <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" style="padding-left: 25px;padding-top: 5px;">
+                    <a class="nav-link" style="color: yellow;" [routerLink]="['/admin/viewjob']" routerLinkActive="router-link-active" >View Jobs</a>
+                </li>
+                <li class="nav-item" style="animation-direction: reverse; padding-left: 25px;">
+                    <form action="" class="form1">
+                        <input type="search" class="input1" placeholder="search by role">
+                        <i class="fa fa-search"></i>
+                    </form>
+                </li>
             </ul>
+            <form class="form-inline my-2 my-lg0" style="padding-right: 2.5em; padding-top: 5px;">
+                <a class="nav-link" style="color: yellow;" routerLink="">Logout</a>
+            </form>
         </div>
-    </div>
-</nav>
-<div class="container">
-    <form action="" class="form1">
-        <input type="search" class="input1" placeholder="search by role">
-        <i class="fa fa-search"></i>
-    </form>
-</div>
+    </nav>
 
 <div class="col-md-12 ftco-animate">
-    
-        <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center" *ngFor="let j of job">
 
-            <div class="mb-4 mb-md-0 mr-5">
-                <div class="job-post-item-header d-flex align-items-center">
-                    <h2 class="mr-3 text-black h4">{{j.jobTitle}}</h2>
-                    <div class="badge-wrap">
-                        <span class="bg-warning text-white badge py-2 px-3">{{j.schedule}}</span>
-                    </div>
-                </div>
-                <div class="job-post-item-body d-block d-md-flex">
-                    <div class="mr-3"><span class="icon-layers"></span> <a href="#">{{j.jobType}}</a></div>
-                    <div><span class="icon-my_location"></span> <span>{{j.primaryLocation}}</span></div>
+    <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center" *ngFor="let j of job">
+
+        <div class="mb-4 mb-md-0 mr-5">
+            <div class="job-post-item-header d-flex align-items-center">
+                <h2 class="mr-3 text-black h4">{{j.jobTitle}}</h2>
+                <div class="badge-wrap">
+                    <span class="bg-warning text-white badge py-2 px-3">{{j.schedule}}</span>
+                    <span class="bg-info text-white badge py-2 px-3">{{j.yearsofExperience}}</span>
                 </div>
             </div>
-
-            <div class="ml-auto d-flex" style="align-content:right;">
-                <a href=" " class="btn btn-primary py-2 mr-1">Edit Jobs</a>
-                <a href=" " (click)="deleteJob(j)" class="btn btn-primary py-2 mr-1">Remove Jobs</a>
-                <a href=" " class="btn btn-primary py-2 mr-1">Job Description</a>
+            <div class="job-post-item-body d-block d-md-flex">
+                <div class="mr-3"><span class="icon-layers"></span> <a href="#">{{j.jobType}}</a></div>
+                <div><span class="icon-my_location"></span> <span>{{j.primaryLocation}}</span></div>
             </div>
         </div>
+
+        <div class="ml-auto d-flex" style="align-content:right;">
+            <a href=" " [routerLink]="['/updatejob',j.jobId]"  class="btn btn-primary py-2 mr-1">Edit Jobs</a>
+            <a href=" " (click)="deleteJob(j)"  class="btn btn-primary py-2 mr-1">Remove Jobs</a>
+            <a href=" " class="btn btn-primary py-2 mr-1">Job Description</a>
+        </div>
+    </div>
 </div>
 
 
