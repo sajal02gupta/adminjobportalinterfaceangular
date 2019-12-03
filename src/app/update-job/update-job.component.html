@@ -1,122 +1,126 @@
-<div>{{id}}</div>
-<div class="ftco-section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-lg-8 mb-5">
-                <form action="#" class="p-5 bg-white" *ngIf="j.jobId==id">
-                    
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Job ID</label>
-                            <input type="number" name="jobId" [(ngModel)]="j.jobId" class="form-control"
-                                placeholder="eg. 11576635">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Job Title</label>
-                            <input type="text" name="jobTitle" [(ngModel)]="j.jobTitle" class="form-control"
-                                placeholder="eg. Professional UI/UX Designer">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Job Category</label>
-                            <input type="text" name="jobCategory" [(ngModel)]="j.jobCategory" class="form-control"
-                                placeholder="eg. Developer/Analyst">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Location</label>
-                            <input type="text" name="primaryLocation" [(ngModel)]="j.primaryLocation"
-                                class="form-control" placeholder="Bangalore, India">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Additional Location</label>
-                            <input type="text" name="additionalLocation" [(ngModel)]="j.additionalLocation"
-                                class="form-control" placeholder="Bangalore, India">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Schedule</label>
-                            <input type="text" name="schedule" [(ngModel)]="j.schedule" class="form-control"
-                                placeholder="eg. Shifts">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Job Type</label>
-                            <input type="text" name="jobType" [(ngModel)]="j.jobType" class="form-control"
-                                placeholder="eg. Developer/Analyst">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Job Summary</label>
-                            <div class="col-md-12 mb-3 mb-md-0">
-                                <textarea name="jobsummary" name="jobSummary" [(ngModel)]="j.jobSummary"
-                                    class="form-control" id="" cols="30" rows="2"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12">
-                            <h3>Job Description</h3>
-                        </div>
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <textarea name="jobDescription" class="form-control" [(ngModel)]="j.jobDescription"
-                                cols="30" rows="5"></textarea>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Qualification</label>
-                            <div class="col">
-                                <input type="text" name="jobQualification" class="form-control"
-                                    [(ngModel)]="j.jobQualification[0]" placeholder="Enter 10th percentage">
-                            </div>
-                            <div class="col">
-                                <input type="text" name="jobQualification" class="form-control"
-                                    [(ngModel)]="j.jobQualification[1]" placeholder="Enter 12th percentage">
-                            </div>
-                            <div class="col">
-                                <input type="text" name="jobQualification" class="form-control"
-                                    [(ngModel)]="j.jobQualification[2]" placeholder="Enter graduation CGPA">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Work Environment</label>
-                            <input type="text" name="workEnvironment" [(ngModel)]="j.workEnvironment"
-                                class="form-control" placeholder="eg. home or office or both">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Recruiter</label>
-                            <input type="text" name="recruiter" [(ngModel)]="j.recruiter" class="form-control"
-                                placeholder="eg. home or office or both">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="fullname">Similar Jobs</label>
-                            <input type="text" name="similarJobs" [(ngModel)]="j.similarJobs" class="form-control"
-                                placeholder="eg. home or office or both">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12">
-                            <input type="submit" value="Post" class="btn btn-primary  py-2 px-5" (click)="updateJob(j)">
-                        </div>
-                    </div>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: black;">
+    
+            <div> <img src="./../../assets/image/Logo2.jpg" width="150rem" height="80rem" class="d-inline-block align-top" alt=""></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="navbar-nav mr-auto">
+    
+                    <li class="nav-item active" style="padding-left: 25px;padding-top: 5px;">
+                        <a class="nav-link" style="color: yellow;" [routerLink]="['/admin/addjob']" routerLinkActive="router-link-active" >Add Job <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item" style="padding-left: 25px;padding-top: 5px;">
+                        <a class="nav-link" style="color: yellow;" [routerLink]="['/admin/viewjob']" routerLinkActive="router-link-active" >View Jobs</a>
+                    </li>
+                    <li class="nav-item" style="animation-direction: reverse; padding-left: 25px;">
+                        <form action="" class="form1">
+                            <input type="search" class="input1" placeholder="search by role">
+                            <i class="fa fa-search"></i>
+                        </form>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg0" style="padding-right: 2.5em; padding-top: 5px;">
+                    <a class="nav-link" style="color: yellow;" routerLink="">Logout</a>
                 </form>
             </div>
+        </nav>
+    
+    
+        <div class="container" >
+            <form>
+            <div class="row">
+                    <div class="col-md-6" id="form">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Job ID</label>
+                            <input type="text" class="form-control" [(ngModel)]="j.jobId" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                placeholder="Enter Job ID">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Job Category</label>
+                            <input type="text" class="form-control" [(ngModel)]="j.jobCategory" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                placeholder="example:Analyst">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Additional Location</label>
+                            <input type="text" class="form-control" [(ngModel)]="j.additionalLocation" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                placeholder="Enter Location">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Job Description</label>
+                            <textarea class="form-control" id="exampleFormControlInput1" [(ngModel)]="j.jobDescription" [ngModelOptions]="{standalone: true}" placeholder="Enter job responsibilities"></textarea>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Job Type</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="j.jobType" [ngModelOptions]="{standalone: true}" placeholder="example:DXC-Regular">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Work Environment</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="j.workEnvironment" [ngModelOptions]="{standalone: true}" placeholder="exaple:Office environment">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Similar Jobs</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="j.similarJobs" [ngModelOptions]="{standalone: true}" placeholder="Enter related job offerings">
+                        </div>
+                        <button type="submit" (click)="updateJob(j)" class="btn" style="margin-bottom: 20px;">Update Job</button>
+                    </div>
+                    <div class="col-md-6" id="form">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Job Title</label>
+                            <input type="text" class="form-control" [(ngModel)]="j.jobTitle" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                placeholder="Enter Job title">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Primary Location</label>
+                            <input type="text" class="form-control" [(ngModel)]="j.primaryLocation" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                placeholder="Enter Location">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Schedule</label>
+                            <input type="text" class="form-control" [(ngModel)]="j.schedule" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                placeholder="Enter schedule">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Qualifications</label>
+                            <textarea class="form-control" id="exampleFormControlInput1" [(ngModel)]="j.jobQualification" [ngModelOptions]="{standalone: true}"  placeholder="List requirements"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Job Summary</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="j.jobSummary" [ngModelOptions]="{standalone: true}" placeholder="Enter a short description of the job">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Recruiter</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="j.recruiter" [ngModelOptions]="{standalone: true}" placeholder="Enter name of recruiter">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Years of Experience</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="j.yearsofExperience" [ngModelOptions]="{standalone: true}" placeholder="Enter years of experience required">
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>
-</div>
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>

@@ -1,4 +1,6 @@
 export class JobInfo{
+
+  d:any
     constructor(
       public jobId: string,
       public jobTitle: string,
@@ -9,7 +11,7 @@ export class JobInfo{
       public jobType: string,
       public jobSummary: string,
       public jobDescription: string,
-      public jobQualification: string[]=[],
+      public jobQualification: string,
       public workEnvironment: string,
       public recruiter: string,
       public similarJobs: string,

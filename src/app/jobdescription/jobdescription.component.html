@@ -1,36 +1,141 @@
+<body>
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: black;">
+
+    <div> <img src="./../../assets/image/Logo2.jpg" width="150rem" height="80rem" class="d-inline-block align-top"
+            alt=""></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" style="padding-left: 25px;padding-top: 5px;">
+                <a class="nav-link" style="color: yellow;" [routerLink]="['/home',username]"
+                    routerLinkActive="router-link-active">Home
+                    <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" style="padding-left: 25px;padding-top: 5px;">
+                <a class="nav-link" style="color: yellow;" [routerLink]="['/profile',username]"
+                    routerLinkActive="router-link-active">Profile</a>
+            </li>
+            <li class="nav-item" style="animation-direction: reverse; padding-left: 25px;">
+                <form action="" class="form1">
+                    <input type="search" class="input1" placeholder="search by role">
+                    <i class="fa fa-search"></i>
+                </form>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg0" style="padding-right: 2.5em; padding-top: 5px;">
+            <a class="nav-link" style="color: yellow;" routerLink="">Logout</a>
+        </form>
+    </div>
+</nav>
+<div class="jumbotron1 jumbotron-fluid" style="margin-bottom: 3rem;">
+    <div class="container">
+        <h1 class="display-4" style="font-size:300%;"> View Job Posting Details</h1>
+        <h5 class="lead" style="font-size: Large;">{{d.jobTitle}} ({{d.jobId}})</h5>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <div id="canvas" style="width: 100%; height: 400px;"></div>
+            <h5 style="color: yellow;">Job Description:</h5>
+            <p style="color: yellow;"><strong>Job Title</strong></p>
+            <p style="color: white;">{{d.jobTitle}}</p>
+            <p style="color: yellow;"><strong>Job Id</strong></p>
+            <p style="color: white;">{{d.jobId}}</p>
+            <p style=" color: yellow;"><strong>Primary Location</strong></p>
+            <p style="color: white;">{{d.primaryLocation}}</p>
+            <p style=" color: yellow;"><strong>Additional Location</strong></p>
+            <p style=" color: white;"> {{d.additionalLocation}} </p>
+            <p style="color: yellow;"><strong>Schedule</strong></p>
+            <p style="color: white;">{{d.schedule}}</p>
+            <p style=" color: yellow;"><strong>Job Type</strong></p>
+            <p style="color: white;">{{d.jobType}}</p>
+            <p style=" color: yellow;"><strong>Recruiter</strong></p>
+            <p style="color: white;">{{d.recruiter}}</p>
+            <p style=" color: yellow;"><Strong>Job Description</Strong></p>
+            <p style="color: white;">{{d.jobDescription}}</p>
+            <p style="color: yellow;"><strong>Summary</strong></p>
+            <p style="color: white;">{{d.jobSummary}}</p>
+            <p style=" color: yellow;"><strong>Basic Qualification</strong></p>
+            <p style="color: white;">{{d.jobQualification}}</p>
         </div>
         <div class="col-md-6">
-            <p><strong>Job Id:</strong>{{d.jobId}}</p>
-            <p><strong>Job Title:</strong>{{d.jobTitle}}</p>
-            <p><strong>Job Category:</strong>{{d.jobCategory}}</p>
-            <p><strong>Years of experience Required:</strong>{{d.years}}</p>
-            <p><strong>Location:</strong>{{d.primaryLocation}}</p>
-            <p><strong>Additional Location:</strong>{{d.additionalLocation}}</p>
-            <p><strong>Job Type:</strong>{{d.jobType}}</p>
-            <p><strong>Job Qualification:</strong>{{d.jobQualification}}</p>
-            <p><strong>Working Environment:</strong>{{d.workEnvironment}}</p>
-            <p><strong>Recruiter:</strong>{{d.recruiter}}</p>
-            <p><strong>Similar Jobs:</strong>{{d.similarJobs}}</p>
-            <h4>Summary</h4>
-            <p>{{d.jobSummary}}</p>
-            <p><strong>Job Description:</strong>{{d.jobDescription}}</p>
-            <div>
-                <p><button (click)="onClick()" type="button">Click me!</button></p>
-                <div id="result"></div>
 
+            <div>
+                <h5 style="color: yellow;">Job Details:</h5>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label style="color: yellow;"><strong>Job Id</strong></label>
+                </div>
+                <div class="col-md-6">
+                    <p style="color: white;">{{d.jobId}}</p>
+                </div>
             </div>
 
+            <div class="row">
+                <div class="col-md-6">
+                    <label style="color: yellow;"><strong>Location</strong></label>
+                </div>
+                <div class="col-md-6">
+                    <p style="color: white;">{{d.primaryLocation}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label style="color: yellow;"><strong>Posting Date</strong></label>
+                </div>
+                <div class="col-md-6">
+                    <p style="color: white;">{{d.postingDate}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label style="color: yellow;"><strong>Job Type</strong></label>
+                </div>
+                <div class="col-md-6">
+                    <p style="color: white;">{{d.jobType}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label style="color: yellow;"><strong>Recruiter</strong></label>
+                </div>
+                <div class="col-md-6">
+                    <p style="color: white;">{{d.recruiter}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label style="color: yellow;"><strong>Similar Jobs</strong></label>
+                </div>
+                <div class="col-md-6">
+                    <p style="color: white;">{{d.similarJobs}}</p>
+                </div>
+            </div>
+            <button type="button" (click)="applyforjob()"  class="btn btn-warning" style="color:white; margin-top: 2rem;">Apply</button>
         </div>
     </div>
 </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+    integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P"
+    crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -40,25 +145,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-<script>
-    function getGeolocation() {
-        navigator.geolocation.getCurrentPosition(drawMap);
-    }
-    function drawMap(geoPos) {
-        geolocate = new google.maps.LatLng(geoPos.coords.latitude, geoPos.coords.longitude);
-        let mapProp = {
-            center: geolocate,
-            zoom: 5,
-        };
-        let map = new google.maps.Map(document.getElementById('canvas'), mapProp);
-        let infowindow = new google.maps.InfoWindow({
-            map: map,
-            position: geolocate,
-            content:
-                `Location from HTML5 Geolocation:
-                     <br>Latitude: ${geoPos.coords.latitude}
-                     <br>Longitude: ${geoPos.coords.longitude}`
-        });
-    }
-    getGeolocation();
-</script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</body>

@@ -2,7 +2,7 @@
     
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: black;">
 
-    <div> <img src="" width="30" height="30" class="d-inline-block align-top" alt=""></div>
+    <div> <img src="./../../assets/image/Logo2.jpg" width="150rem" height="80rem" class="d-inline-block align-top" alt=""></div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="row">
                         <div class="col-md-6">
-                            <label style="color: yellow;font-size: large; ">Employee Id</label>
+                            <label style="color: yellow;font-size: large; ">Employee Id:</label>
                         </div>
                         <div class="col-md-6">
                             <p style="color:white; font-size: large;">{{emp.empId}}</p>
@@ -52,15 +52,15 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label style="color: yellow; font-size: large;"> Full Name</label>
+                            <label style="color: yellow; font-size: large;"> Full Name:</label>
                         </div>
                         <div class="col-md-6">
-                            <p style="color:white; font-size: large;">{{emp.fullname}}</p>
+                            <p style="color:white; font-size: large;">{{emp.fullName}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label style="color: yellow;font-size: large;">Email</label>
+                            <label style="color: yellow;font-size: large;">Email:</label>
                         </div>
                         <div class="col-md-6">
                             <p style="color:white; font-size: large;">{{emp.email}}</p>
@@ -68,7 +68,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label style="color: yellow ;font-size: large;">Phone</label>
+                            <label style="color: yellow ;font-size: large;">Phone:</label>
                         </div>
                         <div class="col-md-6">
                             <p style="color:white;font-size: large;">{{emp.mobile}}</p>
@@ -80,25 +80,25 @@
         <div class="col-md-6" style="margin-top: 2rem;">
             <div class="row">
                 <div class="col-md-6">
-                    <label style="color: yellow;font-size: large;">Current Role</label>
+                    <label style="color: yellow;font-size: large;">Current Role:</label>
                 </div>
                 <div class="col-md-6">
-                    <p style="color:white;font-size: large;">{{emp.currentrole}}</p>
+                    <p style="color:white;font-size: large;">{{emp.currentRole}}</p>
                 </div>
                 <div class="col-md-6">
-                    <label style="color: yellow;font-size: large;">Experience</label>
+                    <label style="color: yellow;font-size: large;">Experience:</label>
                 </div>
                 <div class="col-md-6">
-                    <p style="color:white;font-size: large;">{{emp.years}}</p>
+                    <p style="color:white;font-size: large;">{{emp.yearsofExperience}}</p>
                 </div>
                 <div class="col-md-6">
-                    <label style="color: yellow;font-size: large;">Skills</label>
+                    <label style="color: yellow;font-size: large;">Skills:</label>
                 </div>
                 <div class="col-md-6">
                     <p style="color:white;font-size: large;">{{emp.skills}}</p>
                 </div>
                 <div class="col-md-6">
-                    <label style="color: yellow;font-size: large;">Qualifications</label>
+                    <label style="color: yellow;font-size: large;">Qualifications:</label>
                 </div>
                 <div class="col-md-6">
                     <p style="color:white;font-size: large;">{{emp.qualifications}}</p>
@@ -107,7 +107,7 @@
         </div>
     </div>
 </div>
-<button type="button" class="btn btn-warning" [routerLink]="['/edit',username]" routerLinkActive="router-link-active"  style="margin-top:1.5rem;margin-left:45rem;">Update Jobs</button>
+<button type="button" class="btn btn-warning" [routerLink]="['/edit',username]" routerLinkActive="router-link-active"  style="margin-top:1.5rem;margin-left:35rem; margin-bottom: 15px; ">Update Profile</button>
 </body>
 
 

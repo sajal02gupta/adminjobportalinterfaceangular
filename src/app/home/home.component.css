@@ -1,11 +1,15 @@
-body{
-    background: -webkit-linear-gradient(left,black,grey );
-}
+
 .jumbotron{
-	background-image: url('src/assets/image/JumbotronHome.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
+    background-image: url('https://media.licdn.com/dms/image/C4D1BAQHXJOHjxJ0yFA/company-background_10000/0?e=2159024400&v=beta&t=8V5nGCwGNvLRuY8MY20LfD5DR4tVuoVC49ZtVIqW8T4');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
 } 
+body{
+    background-color: black;
+    height: 120%;
+    border-bottom-right-radius: 20px;
+}
 .form1{
     position: relative;
     top: 50%;

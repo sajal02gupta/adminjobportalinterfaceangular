@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
 import { DataService } from '../data.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -9,13 +9,19 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  emp: Employee = { currentrole: "", email: "", emp: "", fullname: "", id: "",
-               mobile: "", password: "", qualifications: "", skills: "", username: "", years: "" }
-  constructor(private httpclientservice: DataService, private router: ActivatedRoute) { }
+  emp: Employee = { currentRole: "", email: "", emp: "", fullName: "", empId: "",
+               mobile: "", password: "", qualifications: "", skills: "", username: "", yearsofExperience: "" }
+               
+  constructor(private httpclientservice: DataService, private router: ActivatedRoute, private route: Router
+    ) { }
 
   username: string;
   ngOnInit() {
+    console.log(sessionStorage.getItem("username"))
+    if(sessionStorage.getItem("username")==null){
+      this.route.navigate([''])
 
+    }
     this.router.params.subscribe(params => {
       this.username=params.username;
       console.log(params.username); 

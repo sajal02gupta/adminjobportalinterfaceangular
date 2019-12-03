@@ -1,66 +1,20 @@
-body {
-    background: -webkit-linear-gradient(left, white);
-    background-color: black;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+
+.jumbotron{
+    background-image: url('https://media.licdn.com/dms/image/C4D1BAQHXJOHjxJ0yFA/company-background_10000/0?e=2159024400&v=beta&t=8V5nGCwGNvLRuY8MY20LfD5DR4tVuoVC49ZtVIqW8T4');
     background-size: cover;
-
-}
-
-.form-control {
-    font-size: small;
-    font: bolder;
-    border-style: solid;
-    border-color: yellow;
+    background-repeat: no-repeat;
     background-color: black;
-}
-
-.form-control-file {
-    font-size: small;
-}
-
-#exampleFormControlInput1:hover {
-    border: solid, white;
-}
-
-.form-control::placeholder {
-    color: rgb(194, 194, 52);
-}
-
-.form-group {
-    color: white;
-    font-size: 15pt;
-}
-
-#fileHelp {
-    font-size: small;
-}
-
-#exampleFormControlInput1 {
-    color: rgb(194, 194, 59);
+} 
+body{
     background-color: black;
+    height: 120%;
+    border-bottom-right-radius: 20px;
 }
-
-#exampleFormControlInput1:hover {
-    border-style: double;
-}
-
-.btn {
-    border-color: rgb(194, 194, 19);
-    color: white;
-}
-
-.btn:hover {
-    color: black;
-    background-color: rgb(194, 194, 63);
-}
-
-.form1 {
+.form1{
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
     transition: all 1s;
     width: 50px;
     height: 50px;
@@ -72,12 +26,11 @@ body {
 
 }
 
-.input1 {
+.input1{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    ;
+    width: 100%;;
     height: 42.5px;
     line-height: 30px;
     outline: 0;
@@ -85,10 +38,10 @@ body {
     display: none;
     font-size: 1em;
     border-radius: 20px;
-    padding: 0 0 0 20px;
+    padding: 0 20px;
 }
 
-.fa {
+.fa{
     box-sizing: border-box;
     padding: 10px;
     width: 42.5px;
@@ -103,16 +56,16 @@ body {
     transition: all 1s;
 }
 
-.form1:hover {
+.form1:hover{
     width: 200px;
     cursor: pointer;
 }
 
-.form1:hover input {
+.form1:hover input{
     display: block;
 }
 
-.form1:hover .fa {
-    background: yellow;
-    color: black;
+.form1:hover .fa{
+    background:yellow;
+    color:black;
 }

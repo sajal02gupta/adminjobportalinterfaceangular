@@ -1,60 +1,64 @@
+<body>
+
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: black;">
 
-  <div> <img src="" width="30" height="30" class="d-inline-block align-top" alt=""></div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <div> <img src="./../../assets/image/Logo2.jpg" width="150rem" height="80rem" class="d-inline-block align-top" alt=""></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active" style="padding-left: 25px;padding-top: 5px;">
-        <a class="nav-link" style="color: yellow;" [routerLink]="['/home',username]" routerLinkActive="router-link-active">Home
-          <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item" style="padding-left: 25px;padding-top: 5px;">
-        <a class="nav-link" style="color: yellow;" [routerLink]="['/profile',username]"
-          routerLinkActive="router-link-active">Profile</a>
-      </li>
-      <li class="nav-item" style="animation-direction: reverse; padding-left: 25px;">
-        <form action="" class="form1">
-          <input type="search" class="input1" placeholder="search by role">
-          <i class="fa fa-search"></i>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" style="padding-left: 25px;padding-top: 5px;">
+                <a class="nav-link" style="color: yellow;" [routerLink]="['/home',username]"
+                    routerLinkActive="router-link-active">Home
+                    <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" style="padding-left: 25px;padding-top: 5px;">
+                <a class="nav-link" style="color: yellow;" [routerLink]="['/profile',username]"
+                    routerLinkActive="router-link-active">Profile</a>
+            </li>
+            <li class="nav-item" style="animation-direction: reverse; padding-left: 25px;">
+                <form action="" class="form1">
+                    <input type="search" class="input1" placeholder="search by role">
+                    <i class="fa fa-search"></i>
+                </form>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg0" style="padding-right: 2.5em; padding-top: 5px;">
+            <a class="nav-link" style="color: yellow;" routerLink="">Logout</a>
         </form>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg0" style="padding-right: 2.5em; padding-top: 5px;">
-      <a class="nav-link" style="color: yellow;" [routerLink]="['/routePath']" routerLinkActive="router-link-active" >Logout</a>
-    </form>
-</div>
+    </div>
 </nav>
 <div class="jumbotron">
-  <div class="container for-about">
-    <h1 style="color: black;">Jobs</h1>
-  </div>
+    <div class="container for-about" style="margin-bottom: 200px;">
+        
+    </div>
 </div>
-<div class="col-md-12 ftco-animate">
-  <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center" *ngFor="let item of job">
-    <div class="mb-4 mb-md-0 mr-5">
-      <div class="job-post-item-header d-flex align-items-center">
-        <h2 class="mr-3 text-black h4">{{item.jobTitle}}</h2>
-        <div class="badge-wrap">
-          <span class="bg-warning text-white badge py-2 px-3">{{item.jobType}}</span>
-          <span class="bg-info text-white badge ml-1 py-2 px-3">{{item.yearsofExperience}}</span>
+<div class="col-md-12 ftco-animate"style="background-color: black;" >
+    <div class="job-post-item bg-black p-4 d-block d-md-flex align-items-center" *ngFor="let j of job">
+        <div class="mb-4 mb-md-0 mr-5">
+          <div class="job-post-item-header d-flex align-items-center">
+                <h2 class="mr-3 text h4" style="color: yellow;">{{j.jobTitle}}</h2>
+            <div class="badge-wrap">
+              <span class="bg-warning text-white badge mx-1 py-2 px-3">{{j.jobType}}</span>
+              <span class="bg-info text-white badge py-2 px-3">{{j.yearsofExperience}}</span>
+            </div>
+          </div>
+          <div class="job-post-item-body d-block d-md-flex">
+            <div class="mr-3"><span class="icon-layers"></span> <a href="#">{{j.primaryLocation}}</a></div>
+            <div><span class="icon-my_location" ></span> <span style="color: yellow;">{{j.jobCategory}}</span></div>
+          </div>
         </div>
-      </div>
-      <div class="job-post-item-body d-block d-md-flex">
-        <div class="mr-3"><span class="icon-layers"></span> <a href="#">{{item.primaryLocation}}</a></div>
-        <div><span class="icon-my_location"></span> <span>{{item.jobCategory}}</span></div>
-      </div>
+
+        <div class="ml-auto d-flex">
+            <button type="button" class="btn btn-warning" style="margin-right: 5px;">Apply Job</button>&nbsp;&nbsp;
+            <button type="button" [routerLink]="['/home/jobdescription',username,j.jobId]" routerLinkActive="router-link-active"  class="btn btn-warning">Job Description</button>
+        </div>
     </div>
-    <div class="ml-auto d-flex">
-      <a href="" class="btn btn-primary py-2 mr-1">Apply Job</a>
-      <a [routerLink]="['/jobdescription',item.jobId]" routerLinkActive="router-link-active"
-        class="btn btn-primary py-2 mr-1">Job Description</a>
-    </div>
-  </div>
 </div>
+</body>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -63,3 +67,5 @@
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">

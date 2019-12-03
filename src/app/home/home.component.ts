@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JobserviceService } from '../jobservice.service';
 import { JobInfo } from '../JobInfo';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +11,14 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
   job: JobInfo[];
   username: string;
-  constructor(private httpclientservice: JobserviceService, private router: ActivatedRoute) { }
+  constructor(private httpclientservice: JobserviceService, private router: ActivatedRoute, private route:Router) { }
 
   ngOnInit() {
+    if(sessionStorage.getItem("username")==null){
+      this.route.navigate([''])
+
+    }
+
     this.router.params.subscribe(params => {
       this.username=params.username;
       console.log(params.username); 

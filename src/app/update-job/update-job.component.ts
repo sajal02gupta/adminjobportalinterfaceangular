@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JobserviceService } from "./../jobservice.service";
 import { JobInfo } from '../JobInfo';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -11,9 +11,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UpdateJobComponent implements OnInit {
 
-  j: JobInfo= new JobInfo("","","","","","","","","",[],"","","","");
+  j: JobInfo= new JobInfo("","","","","","","","","","","","","","");
   id: string;
-  constructor(private httpclientservice: JobserviceService, private route: ActivatedRoute) {
+  constructor(private httpclientservice: JobserviceService, private route: ActivatedRoute, private router: Router) {
     this.route.params.subscribe( params => this.id= params.id);
     console.log(this.id);
     
@@ -33,6 +33,7 @@ export class UpdateJobComponent implements OnInit {
     this.httpclientservice.updateJob(job)
     .subscribe(data => {
       alert("Job updated successfully");
+      this.router.navigateByUrl('admin/viewjob');
     }); 
 }
 }

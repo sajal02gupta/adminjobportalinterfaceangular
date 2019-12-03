@@ -14,6 +14,8 @@ import { JobdescriptionComponent } from './jobdescription/jobdescription.compone
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { AdminjobdescriptipnComponent } from './adminjobdescriptipn/adminjobdescriptipn.component';
+import { ViewapplicationsComponent } from './viewapplications/viewapplications.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { RegisterComponent } from './register/register.component';
     JobdescriptionComponent,
     AdminloginComponent,
     ProfileComponent,
-    RegisterComponent
+    RegisterComponent,
+    AdminjobdescriptipnComponent,
+    ViewapplicationsComponent
   ],
   imports: [
     BrowserModule,

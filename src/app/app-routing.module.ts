@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { JobdescriptionComponent } from './jobdescription/jobdescription.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminjobdescriptipnComponent } from './adminjobdescriptipn/adminjobdescriptipn.component';
 
 const routes: Routes = [
   {path: 'admin/viewjob', component: ViewJobComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
   {path:'edit/:username',component:EditprofileComponent},
-  {path:'jobdescription/:id',component:JobdescriptionComponent}
+  {path:'home/jobdescription/:username/:id',component:JobdescriptionComponent},
+  {path: 'admin/jobdescription/:id', component:AdminjobdescriptipnComponent}
 ];
 
 @NgModule({

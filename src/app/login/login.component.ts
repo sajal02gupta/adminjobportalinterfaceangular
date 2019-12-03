@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
   submitted = false;
   flag: number;
   emplogin: Login = new Login("", "");
-  emp: Employee = { currentrole: "", email: "", emp: "", fullname: "", id: "",
-               mobile: "", password: "", qualifications: "", skills: "", username: "", years: "" }
+  emp: Employee = { currentRole: "", email: "", emp: "", fullName: "", empId: "",
+               mobile: "", password: "", qualifications: "", skills: "", username: "", yearsofExperience: "" }
   username: string;
   password: string;
   constructor(private formbuilder: FormBuilder, private httpclientservice: DataService, private router: Router) { }
@@ -51,10 +51,15 @@ export class LoginComponent implements OnInit {
     
     console.log(this.emp.username === this.username);
     console.log('comparing');
+
     if ((this.emp.username === this.username) && (this.emp.password === this.password)) {
       alert("Login successful")
       this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+        sessionStorage.setItem("username",this.username);
+        console.log(sessionStorage.getItem("username"));
+        
         this.router.navigate(['profile/' + this.emp.username]);
+        
       });
       console.log(this.loginForm.value);
       this.flag = 1

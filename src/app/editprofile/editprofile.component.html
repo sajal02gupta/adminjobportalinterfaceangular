@@ -1,62 +1,122 @@
+<body>
+      <nav class="navbar navbar-expand-lg navbar-light " style="background-color: black;">
 
-<div class ="container">
-    <div class="row">
-        <div class="col-md-6">
-    
-        <form>
-                <div class="form-group">
-                        <label for="exampleFormControlInput1">Full Name</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter full name">
-                      </div>
-                      <div class="form-group">
-                            <label for="exampleFormControlInput1">Employee Id</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter employeee id">
-                      </div>
-                <div class="form-group">
-                <label for="exampleFormControlInput1">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                        <label for="exampleFormControlInput1">Currrent Role</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example:Senior Professional Application Delivery">
-                      </div>
-                      <div class="form-group">
-                            <label for="exampleFormControlInput1">Mobile No.</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter mobile no.">
-                      </div>
-                      <div class="form-group">
-                      <input type="checkbox" name="vehicle" value="Bike"> Angular Js<br>
-                      <input type="checkbox" name="vehicle" value="Car" checked="checked"> AngularIo<br>
-                      <input type="checkbox" name="vehicle" value="Bike"> Bootstrap,Css<br>
-                      <input type="checkbox" name="vehicle" value="Car" checked="checked"> Full Stack Java<br>
-                      <input type="checkbox" name="vehicle" value="Bike"> Mongodb<br>
-                      <input type="checkbox" name="vehicle" value="Car" checked="checked">Selenium<br>
-                      
-                      </div>
-                                  <div class="form-group">
-                                        <label for="exampleInputFile">Add Photo</label>
-                                        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                                        <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for
-                                            the above input. It's a bit lighter and easily wraps to a new line.</small>
-                                    </div>
-                                  <div class="form-group">
-                                        <label for="exampleInputFile">Add Resume</label>
-                                        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                                        <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for
-                                            the above input. It's a bit lighter and easily wraps to a new line.</small>
-                                    </div>
-                    
-                    
-                                  <button type="submit" class="btn btn-primary">Edit</button>
-               
-              </form>           
-</div>
-</div>
-</div>
+            <div> <img src="./../../assets/image/Logo2.jpg" width="150rem" height="80rem"
+                        class="d-inline-block align-top" alt=""></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active" style="padding-left: 25px;padding-top: 5px;">
+                              <a class="nav-link" style="color: yellow;" [routerLink]="['/home',username]"
+                                    routerLinkActive="router-link-active">Home
+                                    <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item" style="padding-left: 25px;padding-top: 5px;">
+                              <a class="nav-link" style="color: yellow;" [routerLink]="['/profile',username]"
+                                    routerLinkActive="router-link-active">Profile</a>
+                        </li>
+                        <li class="nav-item" style="animation-direction: reverse; padding-left: 25px;">
+                              <form action="" class="form1">
+                                    <input type="search" class="input1" placeholder="search by role">
+                                    <i class="fa fa-search"></i>
+                              </form>
+                        </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg0" style="padding-right: 2.5em; padding-top: 5px;">
+                        <a class="nav-link" style="color: yellow;" routerLink="">Logout</a>
+                  </form>
+            </div>
+      </nav>
+
+      <div class="container">
+            <div class="row">
+                  <div class="col-md-6" id="form">
+                        <form>
+                              <div class="form-group">
+                                    <label for="exampleFormControlInput1">Full Name</label>
+                                    <input type="text" class="form-control" [(ngModel)]="emp.fullName" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                          placeholder="Enter full name">
+                              </div>
+
+                              <div class="form-group">
+                                    <label for="exampleFormControlInput1">Currrent Role</label>
+                                    <input type="email" class="form-control" [(ngModel)]="emp.currentRole" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                          placeholder="example:Senior Professional Application Delivery">
+                              </div>
+
+
+                              <div class="form-group">
+                                    <label for="exampleFormControlInput1">Mobile No.</label>
+                                    <input type="email" class="form-control" [(ngModel)]="emp.mobile" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                          placeholder="Enter mobile no.">
+                              </div>
+                              <div class="form-group">
+                                    <label for="exampleFormControlInput1">Skills</label>
+                                    <textarea class="form-control" [(ngModel)]="emp.skills" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                          placeholder="Enter each skill spaced with a comma"></textarea>
+                              </div>
+
+
+                              <div class="form-group">
+                                    <label for="exampleInputFile">Add Photo</label>
+                                    <input type="file" class="form-control-file" id="exampleInputFile"
+                                          aria-describedby="fileHelp">
+                                    <small id="fileHelp" class="form-text text-muted">Only JPG/PNG</small>
+                              </div>
+
+
+
+                              <button type="submit" (click)="updateprofile(emp)" class="btn">Register</button>
+
+                        </form>
+                  </div>
+                  <div class="col-md-6" id="form">
+                        <form>
+                              <div class="form-group">
+                                    <label for="exampleFormControlInput1">Employee Id</label>
+                                    <input type="email" class="form-control" [(ngModel)]="emp.empId" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                          placeholder="Enter employeee id">
+                              </div>
+                              <div class="form-group">
+                                    <label for="exampleFormControlInput1">Email address</label>
+                                    <input type="email" class="form-control" [(ngModel)]="emp.email" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                          placeholder="name@example.com">
+                              </div>
+                              <div class="form-group">
+                                    <label for="exampleFormControlInput1">Years of Experience</label>
+                                    <input type="email" class="form-control" [(ngModel)]="emp.yearsofExperience" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
+                                          placeholder="Enter no. of years">
+                              </div>
+                              <div class="form-group">
+                                    <label for="exampleFormControlInput1">Qualifications</label>
+                                    <textarea class="form-control" id="exampleFormControlInput1" [(ngModel)]="emp.qualifications" [ngModelOptions]="{standalone: true}"
+                                          placeholder="Enter each qualification spaced with a comma"></textarea>
+                              </div>
+                              <div class="form-group">
+                                    <label for="exampleInputFile">Add Resume</label>
+                                    <input type="file" class="form-control-file" id="exampleInputFile"
+                                          aria-describedby="fileHelp">
+                                    <small id="fileHelp" class="form-text text-muted">Only PDF/DOC</small>
+                              </div>
+                        </form>
+                  </div>
+            </div>
+      </div>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>

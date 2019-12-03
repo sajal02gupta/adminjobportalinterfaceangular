@@ -8,9 +8,7 @@ import { JobInfo } from "../JobInfo";
 })
 export class AddJobComponent implements OnInit {
 
-  job: JobInfo= new JobInfo("","","","","","","","","",[],"","", "",""); 
-  qualifications:string[] = ["", "", ""];
-
+  job: JobInfo= {d:"", jobId:"", jobCategory:"", jobDescription:"", jobQualification:"", jobSummary:"", jobTitle:"", jobType:"", primaryLocation:"", additionalLocation:"", schedule:"",recruiter:"", workEnvironment:"",yearsofExperience:"",similarJobs:""}
   constructor(private httpclientservice: JobserviceService) { }
 
   ngOnInit() {
@@ -18,7 +16,6 @@ export class AddJobComponent implements OnInit {
 
   createjob(): void {
     console.log(this.job)
-    this.job.jobQualification = this.qualifications;
     this.httpclientservice.createJob(this.job)
       .subscribe(data => {
         alert("Employee created successfully.");

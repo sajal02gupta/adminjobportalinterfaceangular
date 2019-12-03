@@ -2,14 +2,14 @@ export class Employee {
   emp: any;
    
     constructor(
-public id:string,
-public fullname:string,
-public currentrole:string,
+public empId:string,
+public fullName:string,
+public currentRole:string,
 public email:string,
 public password: string,
 public username: string,
 public mobile:string,
-public years:string,
+public yearsofExperience:string,
 public skills:string,
 public qualifications:string
     )

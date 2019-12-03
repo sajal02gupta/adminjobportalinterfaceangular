@@ -1,7 +1,7 @@
 <body>
         <nav class="navbar navbar-expand-lg navbar-light " style="background-color: black;">
     
-            <div> <img src=".assets/image/Logo1.png" width="30" height="30" class="d-inline-block align-top" alt=""></div>
+            <div> <img src="./../../assets/image/Logo2.jpg" width="150rem" height="80rem" class="d-inline-block align-top" alt=""></div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,90 +32,82 @@
     
     
         <div class="container">
+            <form>
             <div class="row">
-                <div class="col-md-6" id="form">
-    
-                    <form>
+                    <div class="col-md-6" id="form">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Job ID</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" [(ngModel)]="job.jobId" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
                                 placeholder="Enter Job ID">
                         </div>
     
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Job Category</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" [(ngModel)]="job.jobCategory" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
                                 placeholder="example:Analyst">
                         </div>
-    
-    
+
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Additional Location</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" [(ngModel)]="job.additionalLocation" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
                                 placeholder="Enter Location">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Job Description</label>
-                            <textarea class="form-control" id="exampleFormControlInput1" placeholder="Enter job responsibilities"></textarea>
+                            <textarea class="form-control" id="exampleFormControlInput1" [(ngModel)]="job.jobDescription" [ngModelOptions]="{standalone: true}" placeholder="Enter job responsibilities"></textarea>
                         </div>
     
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Job Type</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example:DXC-Regular">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="job.jobType" [ngModelOptions]="{standalone: true}" placeholder="example:DXC-Regular">
                         </div>
     
     
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Work Environment</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="exaple:Office environment">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="job.workEnvironment" [ngModelOptions]="{standalone: true}" placeholder="exaple:Office environment">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Similar Jobs</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter related job offerings">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="job.similarJobs" [ngModelOptions]="{standalone: true}" placeholder="Enter related job offerings">
                         </div>
-                        <button type="submit" class="btn">Post Job</button>
-    
-                    </form>
-                </div>
-                <div class="col-md-6" id="form">
-                    <form>
+                        <button type="submit" (click)="createjob()" class="btn" style="margin-bottom: 20px;">Post Job</button>
+                    </div>
+                    <div class="col-md-6" id="form">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Job Title</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" [(ngModel)]="job.jobTitle" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
                                 placeholder="Enter Job title">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Primary Location</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" [(ngModel)]="job.primaryLocation" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
                                 placeholder="Enter Location">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Schedule</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" [(ngModel)]="job.schedule" [ngModelOptions]="{standalone: true}" id="exampleFormControlInput1"
                                 placeholder="Enter schedule">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Qualifications</label>
-                            <textarea class="form-control" id="exampleFormControlInput1" placeholder="List requirements"></textarea>
+                            <textarea class="form-control" id="exampleFormControlInput1" [(ngModel)]="job.jobQualification" [ngModelOptions]="{standalone: true}"  placeholder="List requirements"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Job Summary</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter a short description of the job">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="job.jobSummary" [ngModelOptions]="{standalone: true}" placeholder="Enter a short description of the job">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Recruiter</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter name of recruiter">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="job.recruiter" [ngModelOptions]="{standalone: true}" placeholder="Enter name of recruiter">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Years of Experience</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter years of experience required">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="job.yearsofExperience" [ngModelOptions]="{standalone: true}" placeholder="Enter years of experience required">
                         </div>
-                    </form>
+                    </div>
                 </div>
-    
-            </div>
-    
-    
+            </form>
         </div>
     
         <!-- Optional JavaScript -->
